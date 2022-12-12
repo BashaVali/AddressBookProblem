@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 namespace AddressBookProblem
 {
     public class program
@@ -11,7 +10,7 @@ namespace AddressBookProblem
             {
                 Console.WriteLine("Welcome to Address Book Problem Statement\n");
                 Console.WriteLine("Enter your Choice");
-                Console.WriteLine("1. Create a new Contact \n2. Exit \n");
+                Console.WriteLine("1. Create a new Contact \n2. Edit a Contact \n3. Exit \n");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -19,9 +18,12 @@ namespace AddressBookProblem
                         Console.WriteLine("\nEnter your details :-\n");
                             AddressBook.Contact();
                         break;
+                    case 2:
+                             AddressBook.Edit();                       
+                        break;
                     default:
                         Console.WriteLine("Try Again");
-                        condition = false;
+                            condition = false;
                         break;
                 }
             }
